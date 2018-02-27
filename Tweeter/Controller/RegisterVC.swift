@@ -25,7 +25,15 @@ class RegisterVC: UIViewController {
     }
 
     @IBAction func registerBtnTapped(_ sender: Any) {
-        print("Register")
+        if usernameTxtField.text!.isEmpty || passwordTxtField.text!.isEmpty || emailTxtField.text!.isEmpty || firstNameTxtField.text!.isEmpty || lastNameTxtField.text!.isEmpty {
+            usernameTxtField.attributedPlaceholder = NSAttributedString(string: "USERNAME", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.5807225108, green: 0.066734083, blue: 0, alpha: 1)])
+            emailTxtField.attributedPlaceholder = NSAttributedString(string: "EMAIL", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.5808190107, green: 0.0884276256, blue: 0.3186392188, alpha: 1)])
+            passwordTxtField.attributedPlaceholder = NSAttributedString(string: "PASSWORD", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.5808190107, green: 0.0884276256, blue: 0.3186392188, alpha: 1)])
+            firstNameTxtField.attributedPlaceholder = NSAttributedString(string: "FIRST NAME", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.5808190107, green: 0.0884276256, blue: 0.3186392188, alpha: 1)])
+            lastNameTxtField.attributedPlaceholder = NSAttributedString(string: "LAST NAME", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.5808190107, green: 0.0884276256, blue: 0.3186392188, alpha: 1)])
+        } else {
+            // create new user in MySql
+        }
     }
     
     @IBAction func toLoginScreenBtnTapped(_ sender: Any) {
