@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jSJ-Sj-XeI">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -13,135 +13,155 @@
         <array key="Courier.ttc">
             <string>Courier</string>
             <string>Courier-Bold</string>
+            <string>Courier-BoldOblique</string>
         </array>
     </customFonts>
     <scenes>
         <!--RegisterVC-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="0fy-ii-tmI">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="RegisterVC" customModule="Tweeter" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="jSJ-Sj-XeI" customClass="RegisterVC" customModule="Tweeter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M4u-4E-bS1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rLW-ld-58S">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="skyBackground" translatesAutoresizingMaskIntoConstraints="NO" id="awO-JE-Ctr">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="PHs-ed-l02">
-                                <rect key="frame" x="30" y="50" width="315" height="467"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tweeter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFV-W7-woy">
-                                        <rect key="frame" x="0.0" y="0.0" width="315" height="53"/>
-                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="53"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="USERNAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NnP-PH-q7u">
-                                        <rect key="frame" x="0.0" y="72" width="315" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="35X-qJ-5ze"/>
-                                        </constraints>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EMAIL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vmv-Ki-VSF">
-                                        <rect key="frame" x="0.0" y="141" width="315" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="Yyg-g4-S95"/>
-                                        </constraints>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PASSWORD" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="enp-9v-yCh">
-                                        <rect key="frame" x="0.0" y="210" width="315" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="T37-dQ-nnk"/>
-                                        </constraints>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                    </textField>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aA5-Ec-EGl">
-                                        <rect key="frame" x="0.0" y="279" width="315" height="50"/>
-                                        <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="FIRST NAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p4n-2z-Tp5">
-                                                <rect key="frame" x="0.0" y="0.0" width="153.5" height="50"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="6rz-nk-HVI"/>
-                                                </constraints>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="LAST NAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HiX-TC-pN9">
-                                                <rect key="frame" x="161.5" y="0.0" width="153.5" height="50"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="BUF-Pz-VcL"/>
-                                                </constraints>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z43-5h-hJM">
-                                        <rect key="frame" x="0.0" y="348" width="315" height="50"/>
-                                        <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="zU7-lf-WsY"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="24"/>
-                                        <state key="normal" title="Register">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="registerBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UV9-tn-5wI"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6Y-2o-2b6">
-                                        <rect key="frame" x="0.0" y="417" width="315" height="50"/>
-                                        <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="YVq-3J-GOL"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="21"/>
-                                        <state key="normal" title="Already have an account?">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="toLoginScreenBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ao3-eg-p9y"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zc6-zp-ADi">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="vlE-7D-9fZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="PHs-ed-l02">
+                                            <rect key="frame" x="30" y="50" width="354" height="467"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tweeter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFV-W7-woy">
+                                                    <rect key="frame" x="0.0" y="0.0" width="354" height="53"/>
+                                                    <fontDescription key="fontDescription" name="Courier-BoldOblique" family="Courier" pointSize="53"/>
+                                                    <color key="textColor" red="0.95706504583358765" green="0.77469557523727417" blue="0.37972313165664673" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="USERNAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NnP-PH-q7u">
+                                                    <rect key="frame" x="0.0" y="72" width="354" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="35X-qJ-5ze"/>
+                                                    </constraints>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <textField opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EMAIL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vmv-Ki-VSF">
+                                                    <rect key="frame" x="0.0" y="141" width="354" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="Yyg-g4-S95"/>
+                                                    </constraints>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <textField opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PASSWORD" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="enp-9v-yCh">
+                                                    <rect key="frame" x="0.0" y="210" width="354" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="T37-dQ-nnk"/>
+                                                    </constraints>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                </textField>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aA5-Ec-EGl">
+                                                    <rect key="frame" x="0.0" y="279" width="354" height="50"/>
+                                                    <subviews>
+                                                        <textField opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="FIRST NAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p4n-2z-Tp5">
+                                                            <rect key="frame" x="0.0" y="0.0" width="173" height="50"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="6rz-nk-HVI"/>
+                                                            </constraints>
+                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
+                                                        <textField opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="LAST NAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HiX-TC-pN9">
+                                                            <rect key="frame" x="181" y="0.0" width="173" height="50"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="BUF-Pz-VcL"/>
+                                                            </constraints>
+                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
+                                                    </subviews>
+                                                </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z43-5h-hJM">
+                                                    <rect key="frame" x="0.0" y="348" width="354" height="50"/>
+                                                    <color key="backgroundColor" red="0.30594715476036072" green="0.71107721328735352" blue="0.81696611642837524" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="zU7-lf-WsY"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="24"/>
+                                                    <state key="normal" title="Register">
+                                                        <color key="titleColor" red="0.95706504579999996" green="0.77469557519999999" blue="0.37972313169999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="registerBtnTapped:" destination="jSJ-Sj-XeI" eventType="touchUpInside" id="itJ-iC-con"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6Y-2o-2b6">
+                                                    <rect key="frame" x="0.0" y="417" width="354" height="50"/>
+                                                    <color key="backgroundColor" red="0.30594715476036072" green="0.71107721328735352" blue="0.81696611642837524" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="YVq-3J-GOL"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="17"/>
+                                                    <state key="normal" title="Already have an account?">
+                                                        <color key="titleColor" red="0.95706504579999996" green="0.77469557519999999" blue="0.37972313169999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="toLoginScreenBtnTapped:" destination="jSJ-Sj-XeI" eventType="touchUpInside" id="kIa-np-csr"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="PHs-ed-l02" firstAttribute="top" secondItem="vlE-7D-9fZ" secondAttribute="top" constant="50" id="Jr4-gy-chO"/>
+                                        <constraint firstAttribute="trailing" secondItem="PHs-ed-l02" secondAttribute="trailing" constant="30" id="gJY-ij-FW6"/>
+                                        <constraint firstItem="PHs-ed-l02" firstAttribute="leading" secondItem="vlE-7D-9fZ" secondAttribute="leading" constant="30" id="yqF-li-ewB"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="rLW-ld-58S" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="GBR-5N-YEh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PHs-ed-l02" secondAttribute="trailing" constant="30" id="GXa-Ab-9if"/>
-                            <constraint firstItem="PHs-ed-l02" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="faZ-G5-Ig7"/>
-                            <constraint firstItem="PHs-ed-l02" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="hNk-t5-9zb"/>
-                            <constraint firstItem="rLW-ld-58S" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="kkb-a3-vPd"/>
-                            <constraint firstItem="rLW-ld-58S" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="s6k-Tc-Ww5"/>
-                            <constraint firstItem="rLW-ld-58S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="shj-FL-qxX"/>
+                            <constraint firstItem="awO-JE-Ctr" firstAttribute="trailing" secondItem="z9J-qK-Kx8" secondAttribute="trailing" id="0jC-sR-0Kl"/>
+                            <constraint firstItem="zc6-zp-ADi" firstAttribute="top" secondItem="M4u-4E-bS1" secondAttribute="top" id="JfK-QQ-KxS"/>
+                            <constraint firstItem="awO-JE-Ctr" firstAttribute="top" secondItem="M4u-4E-bS1" secondAttribute="top" id="Jhp-kG-dZr"/>
+                            <constraint firstItem="z9J-qK-Kx8" firstAttribute="trailing" secondItem="zc6-zp-ADi" secondAttribute="trailing" id="RmG-67-CXK"/>
+                            <constraint firstItem="awO-JE-Ctr" firstAttribute="bottom" secondItem="z9J-qK-Kx8" secondAttribute="bottom" id="iUJ-UL-P8T"/>
+                            <constraint firstItem="zc6-zp-ADi" firstAttribute="leading" secondItem="z9J-qK-Kx8" secondAttribute="leading" id="mDM-OW-ZfH"/>
+                            <constraint firstItem="z9J-qK-Kx8" firstAttribute="bottom" secondItem="zc6-zp-ADi" secondAttribute="bottom" id="tr0-DZ-Sai"/>
+                            <constraint firstItem="awO-JE-Ctr" firstAttribute="leading" secondItem="z9J-qK-Kx8" secondAttribute="leading" id="vAm-Mq-vji"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="z9J-qK-Kx8"/>
                     </view>
                     <connections>
-                        <outlet property="emailTxtField" destination="vmv-Ki-VSF" id="aNX-H3-nFU"/>
-                        <outlet property="firstNameTxtField" destination="p4n-2z-Tp5" id="kdf-Mz-ROh"/>
-                        <outlet property="lastNameTxtField" destination="HiX-TC-pN9" id="YEF-XD-lh9"/>
-                        <outlet property="passwordTxtField" destination="enp-9v-yCh" id="c4X-YO-hEs"/>
-                        <outlet property="registerBtn" destination="z43-5h-hJM" id="eEK-t9-0Jc"/>
-                        <outlet property="toLoginScreenBtn" destination="w6Y-2o-2b6" id="e9J-6s-7tx"/>
-                        <outlet property="usernameTxtField" destination="NnP-PH-q7u" id="ihE-Uq-iFq"/>
+                        <outlet property="emailTxtField" destination="vmv-Ki-VSF" id="BBg-2H-yTL"/>
+                        <outlet property="firstNameTxtField" destination="p4n-2z-Tp5" id="ITg-nl-XAw"/>
+                        <outlet property="lastNameTxtField" destination="HiX-TC-pN9" id="cQS-EH-9N4"/>
+                        <outlet property="passwordTxtField" destination="enp-9v-yCh" id="edH-Gs-tN1"/>
+                        <outlet property="registerBtn" destination="z43-5h-hJM" id="W91-cE-mls"/>
+                        <outlet property="toLoginScreenBtn" destination="w6Y-2o-2b6" id="lLd-FT-Vng"/>
+                        <outlet property="usernameTxtField" destination="NnP-PH-q7u" id="IX3-pw-75B"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cmD-AG-l27" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-262" y="34"/>
+            <point key="canvasLocation" x="46.875" y="-75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="skyBackground" width="1920" height="1200"/>
+    </resources>
 </document>

@@ -25,11 +25,11 @@ class RegisterVC: UIViewController {
     }
 
     @IBAction func registerBtnTapped(_ sender: Any) {
-        
+        print("Register")
     }
     
     @IBAction func toLoginScreenBtnTapped(_ sender: Any) {
-        
+        print("Login screen")
     }
     
 
