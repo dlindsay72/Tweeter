@@ -37,7 +37,8 @@ class RegisterVC: UIViewController {
     }
     
     @IBAction func toLoginScreenBtnTapped(_ sender: Any) {
-        print("Login screen")
+        let loginVC = storyboard?.instantiateViewController(withIdentifier: "LoginVC") as? LoginVC
+        present(loginVC!, animated: true, completion: nil)
     }
     
 

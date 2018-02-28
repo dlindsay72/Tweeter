@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jSJ-Sj-XeI">
-    <device id="retina5_5" orientation="portrait">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,6 +15,12 @@
             <string>Courier-Bold</string>
             <string>Courier-BoldOblique</string>
         </array>
+        <array key="CourierNewBold.ttf">
+            <string>CourierNewPS-BoldMT</string>
+        </array>
+        <array key="CourierNewBoldItalic.ttf">
+            <string>CourierNewPS-BoldItalicMT</string>
+        </array>
     </customFonts>
     <scenes>
         <!--RegisterVC-->
@@ -22,101 +28,144 @@
             <objects>
                 <viewController id="jSJ-Sj-XeI" customClass="RegisterVC" customModule="Tweeter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M4u-4E-bS1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="skyBackground" translatesAutoresizingMaskIntoConstraints="NO" id="awO-JE-Ctr">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zc6-zp-ADi">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="vlE-7D-9fZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="PHs-ed-l02">
-                                            <rect key="frame" x="30" y="50" width="354" height="467"/>
+                                            <rect key="frame" x="30" y="50" width="708" height="678"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tweeter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFV-W7-woy">
-                                                    <rect key="frame" x="0.0" y="0.0" width="354" height="53"/>
-                                                    <fontDescription key="fontDescription" name="Courier-BoldOblique" family="Courier" pointSize="53"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="708" height="84"/>
+                                                    <fontDescription key="fontDescription" name="Courier-BoldOblique" family="Courier" pointSize="84"/>
                                                     <color key="textColor" red="0.95706504583358765" green="0.77469557523727417" blue="0.37972313165664673" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <fontDescription key="fontDescription" name="Courier-BoldOblique" family="Courier" pointSize="40"/>
+                                                    </variation>
                                                 </label>
-                                                <textField opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="USERNAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NnP-PH-q7u">
-                                                    <rect key="frame" x="0.0" y="72" width="354" height="50"/>
+                                                <textField opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="USERNAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NnP-PH-q7u">
+                                                    <rect key="frame" x="0.0" y="103" width="708" height="80"/>
+                                                    <color key="backgroundColor" red="0.30594715480000001" green="0.71107721329999996" blue="0.81696611640000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="35X-qJ-5ze"/>
+                                                        <constraint firstAttribute="height" constant="80" id="35X-qJ-5ze">
+                                                            <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                                        </constraint>
                                                     </constraints>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                                    <color key="textColor" red="0.98491555450000001" green="0.69197994470000002" blue="0.30195689199999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="45"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="25"/>
+                                                    </variation>
                                                 </textField>
-                                                <textField opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EMAIL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vmv-Ki-VSF">
-                                                    <rect key="frame" x="0.0" y="141" width="354" height="50"/>
+                                                <textField opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EMAIL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vmv-Ki-VSF">
+                                                    <rect key="frame" x="0.0" y="202" width="708" height="80"/>
+                                                    <color key="backgroundColor" red="0.30594715480000001" green="0.71107721329999996" blue="0.81696611640000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="Yyg-g4-S95"/>
+                                                        <constraint firstAttribute="height" constant="80" id="Yyg-g4-S95">
+                                                            <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                                        </constraint>
                                                     </constraints>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                                    <color key="textColor" red="0.98491555450000001" green="0.69197994470000002" blue="0.30195689199999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="45"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="22"/>
+                                                    </variation>
                                                 </textField>
-                                                <textField opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PASSWORD" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="enp-9v-yCh">
-                                                    <rect key="frame" x="0.0" y="210" width="354" height="50"/>
+                                                <textField opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PASSWORD" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="enp-9v-yCh">
+                                                    <rect key="frame" x="0.0" y="301" width="708" height="80"/>
+                                                    <color key="backgroundColor" red="0.30594715480000001" green="0.71107721329999996" blue="0.81696611640000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="T37-dQ-nnk"/>
+                                                        <constraint firstAttribute="height" constant="80" id="T37-dQ-nnk">
+                                                            <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                                        </constraint>
                                                     </constraints>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                                    <color key="textColor" red="0.98491555450000001" green="0.69197994470000002" blue="0.30195689199999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="45"/>
                                                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="22"/>
+                                                    </variation>
                                                 </textField>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aA5-Ec-EGl">
-                                                    <rect key="frame" x="0.0" y="279" width="354" height="50"/>
+                                                    <rect key="frame" x="0.0" y="400" width="708" height="80"/>
                                                     <subviews>
-                                                        <textField opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="FIRST NAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p4n-2z-Tp5">
-                                                            <rect key="frame" x="0.0" y="0.0" width="173" height="50"/>
+                                                        <textField opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="FIRST NAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p4n-2z-Tp5">
+                                                            <rect key="frame" x="0.0" y="0.0" width="350" height="80"/>
+                                                            <color key="backgroundColor" red="0.30594715480000001" green="0.71107721329999996" blue="0.81696611640000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="50" id="6rz-nk-HVI"/>
+                                                                <constraint firstAttribute="height" constant="80" id="6rz-nk-HVI">
+                                                                    <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                                                </constraint>
                                                             </constraints>
-                                                            <nil key="textColor"/>
-                                                            <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                                            <color key="textColor" red="0.98491555450000001" green="0.69197994470000002" blue="0.30195689199999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="45"/>
                                                             <textInputTraits key="textInputTraits"/>
+                                                            <variation key="heightClass=regular-widthClass=compact">
+                                                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="18"/>
+                                                            </variation>
                                                         </textField>
-                                                        <textField opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="LAST NAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HiX-TC-pN9">
-                                                            <rect key="frame" x="181" y="0.0" width="173" height="50"/>
+                                                        <textField opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="LAST NAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HiX-TC-pN9">
+                                                            <rect key="frame" x="358" y="0.0" width="350" height="80"/>
+                                                            <color key="backgroundColor" red="0.30594715480000001" green="0.71107721329999996" blue="0.81696611640000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="50" id="BUF-Pz-VcL"/>
+                                                                <constraint firstAttribute="height" constant="80" id="BUF-Pz-VcL">
+                                                                    <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                                                </constraint>
                                                             </constraints>
-                                                            <nil key="textColor"/>
-                                                            <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                                            <color key="textColor" red="0.98491555450000001" green="0.69197994470000002" blue="0.30195689199999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="45"/>
                                                             <textInputTraits key="textInputTraits"/>
+                                                            <variation key="heightClass=regular-widthClass=compact">
+                                                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="18"/>
+                                                            </variation>
                                                         </textField>
                                                     </subviews>
                                                 </stackView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z43-5h-hJM">
-                                                    <rect key="frame" x="0.0" y="348" width="354" height="50"/>
+                                                    <rect key="frame" x="0.0" y="499" width="708" height="80"/>
                                                     <color key="backgroundColor" red="0.30594715476036072" green="0.71107721328735352" blue="0.81696611642837524" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="zU7-lf-WsY"/>
+                                                        <constraint firstAttribute="height" constant="80" id="zU7-lf-WsY">
+                                                            <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                                        </constraint>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="24"/>
+                                                    <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="56"/>
                                                     <state key="normal" title="Register">
                                                         <color key="titleColor" red="0.95706504579999996" green="0.77469557519999999" blue="0.37972313169999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="25"/>
+                                                    </variation>
                                                     <connections>
                                                         <action selector="registerBtnTapped:" destination="jSJ-Sj-XeI" eventType="touchUpInside" id="itJ-iC-con"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6Y-2o-2b6">
-                                                    <rect key="frame" x="0.0" y="417" width="354" height="50"/>
+                                                    <rect key="frame" x="0.0" y="598" width="708" height="80"/>
                                                     <color key="backgroundColor" red="0.30594715476036072" green="0.71107721328735352" blue="0.81696611642837524" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="YVq-3J-GOL"/>
+                                                        <constraint firstAttribute="height" constant="80" id="YVq-3J-GOL">
+                                                            <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                                        </constraint>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="36"/>
                                                     <state key="normal" title="Already have an account?">
                                                         <color key="titleColor" red="0.95706504579999996" green="0.77469557519999999" blue="0.37972313169999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="16"/>
+                                                    </variation>
                                                     <connections>
                                                         <action selector="toLoginScreenBtnTapped:" destination="jSJ-Sj-XeI" eventType="touchUpInside" id="kIa-np-csr"/>
                                                     </connections>
@@ -160,8 +209,161 @@
             </objects>
             <point key="canvasLocation" x="46.875" y="-75"/>
         </scene>
+        <!--LoginVC-->
+        <scene sceneID="QX3-PV-Zon">
+            <objects>
+                <viewController storyboardIdentifier="LoginVC" id="1lj-2c-8R3" customClass="LoginVC" customModule="Tweeter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L9h-dZ-yVX">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flipped" translatesAutoresizingMaskIntoConstraints="NO" id="FXV-3B-Dl4">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wEK-xU-ZEF">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ghm-Th-d2Y">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tweeter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iXz-M2-cfu">
+                                            <rect key="frame" x="8" y="33" width="752" height="169"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="169" id="Jwu-Bp-P2b"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="CourierNewPS-BoldItalicMT" family="Courier New" pointSize="170"/>
+                                            <color key="textColor" red="0.98491555450000001" green="0.69197994470000002" blue="0.30195689199999998" alpha="0.1368257705479452" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="jMH-w0-rPS">
+                                            <rect key="frame" x="30" y="150" width="708" height="504"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome back!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wUy-X2-fQo">
+                                                    <rect key="frame" x="0.0" y="0.0" width="708" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="Los-Gk-M5T">
+                                                            <variation key="heightClass=compact-widthClass=compact" constant="60"/>
+                                                        </constraint>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="90"/>
+                                                    <color key="textColor" red="0.30594715480000001" green="0.71107721329999996" blue="0.81696611640000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="45"/>
+                                                    </variation>
+                                                </label>
+                                                <textField opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1qe-Vk-RFd">
+                                                    <rect key="frame" x="0.0" y="121" width="708" height="80"/>
+                                                    <color key="backgroundColor" red="0.30594715480000001" green="0.71107721329999996" blue="0.81696611640000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="XiZ-6q-sNN">
+                                                            <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                                        </constraint>
+                                                    </constraints>
+                                                    <color key="textColor" red="0.98491555450000001" green="0.69197994470000002" blue="0.30195689199999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="45"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="22"/>
+                                                    </variation>
+                                                </textField>
+                                                <textField opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2mQ-I9-Rku">
+                                                    <rect key="frame" x="0.0" y="222" width="708" height="80"/>
+                                                    <color key="backgroundColor" red="0.30594715480000001" green="0.71107721329999996" blue="0.81696611640000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="ebY-hA-2q2">
+                                                            <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                                        </constraint>
+                                                    </constraints>
+                                                    <color key="textColor" red="0.98491555450000001" green="0.69197994470000002" blue="0.30195689199999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="45"/>
+                                                    <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="22"/>
+                                                    </variation>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDa-5n-YEd">
+                                                    <rect key="frame" x="0.0" y="323" width="708" height="80"/>
+                                                    <color key="backgroundColor" red="0.30594715480000001" green="0.71107721329999996" blue="0.81696611640000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="cUL-Km-KfA">
+                                                            <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                                        </constraint>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="64"/>
+                                                    <state key="normal" title="Login">
+                                                        <color key="titleColor" red="0.98491555450000001" green="0.69197994470000002" blue="0.30195689199999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="27"/>
+                                                    </variation>
+                                                    <connections>
+                                                        <action selector="loginBtnTapped:" destination="1lj-2c-8R3" eventType="touchUpInside" id="4cJ-pg-ht3"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ln-Hb-cUZ">
+                                                    <rect key="frame" x="0.0" y="424" width="708" height="80"/>
+                                                    <color key="backgroundColor" red="0.30594715480000001" green="0.71107721329999996" blue="0.81696611640000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="JgM-al-aDD">
+                                                            <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                                        </constraint>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="54"/>
+                                                    <state key="normal" title="Not a member?">
+                                                        <color key="titleColor" red="0.98491555450000001" green="0.69197994470000002" blue="0.30195689199999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="25"/>
+                                                    </variation>
+                                                    <connections>
+                                                        <action selector="notAMemberBtnTapped:" destination="1lj-2c-8R3" eventType="touchUpInside" id="YGf-61-Mae"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="iXz-M2-cfu" firstAttribute="leading" secondItem="ghm-Th-d2Y" secondAttribute="leading" constant="8" id="49w-rz-11j"/>
+                                        <constraint firstItem="jMH-w0-rPS" firstAttribute="top" secondItem="ghm-Th-d2Y" secondAttribute="top" constant="150" id="Eth-wP-1zz">
+                                            <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                                        </constraint>
+                                        <constraint firstItem="jMH-w0-rPS" firstAttribute="leading" secondItem="ghm-Th-d2Y" secondAttribute="leading" constant="30" id="Q4C-Ml-EUu"/>
+                                        <constraint firstItem="iXz-M2-cfu" firstAttribute="top" secondItem="ghm-Th-d2Y" secondAttribute="top" constant="33" id="RwA-Ry-R54"/>
+                                        <constraint firstAttribute="trailing" secondItem="iXz-M2-cfu" secondAttribute="trailing" constant="8" id="dyE-TO-Dl6"/>
+                                        <constraint firstAttribute="trailing" secondItem="jMH-w0-rPS" secondAttribute="trailing" constant="30" id="lfC-G2-oIf"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Hkl-ii-sxc" firstAttribute="bottom" secondItem="FXV-3B-Dl4" secondAttribute="bottom" id="2aB-4b-s2B"/>
+                            <constraint firstItem="Hkl-ii-sxc" firstAttribute="trailing" secondItem="FXV-3B-Dl4" secondAttribute="trailing" id="DUU-ms-Z3z"/>
+                            <constraint firstItem="FXV-3B-Dl4" firstAttribute="top" secondItem="L9h-dZ-yVX" secondAttribute="top" id="Lz3-fS-Ste"/>
+                            <constraint firstItem="FXV-3B-Dl4" firstAttribute="leading" secondItem="Hkl-ii-sxc" secondAttribute="leading" id="QEL-LP-8V3"/>
+                            <constraint firstItem="wEK-xU-ZEF" firstAttribute="top" secondItem="L9h-dZ-yVX" secondAttribute="top" id="QNb-nk-qWp"/>
+                            <constraint firstItem="wEK-xU-ZEF" firstAttribute="leading" secondItem="Hkl-ii-sxc" secondAttribute="leading" id="bGa-JJ-CwX"/>
+                            <constraint firstItem="Hkl-ii-sxc" firstAttribute="trailing" secondItem="wEK-xU-ZEF" secondAttribute="trailing" id="gIg-i3-Bvg"/>
+                            <constraint firstItem="Hkl-ii-sxc" firstAttribute="bottom" secondItem="wEK-xU-ZEF" secondAttribute="bottom" id="yVR-ER-AIj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Hkl-ii-sxc"/>
+                    </view>
+                    <connections>
+                        <outlet property="loginBtn" destination="nDa-5n-YEd" id="mJk-cu-URe"/>
+                        <outlet property="notAMemberBtn" destination="2ln-Hb-cUZ" id="3e6-FC-935"/>
+                        <outlet property="passwordTextField" destination="2mQ-I9-Rku" id="mhv-Ev-Arm"/>
+                        <outlet property="usernameTextField" destination="1qe-Vk-RFd" id="1t2-Fr-FGn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vyb-N9-3oR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="829.6875" y="-86.1328125"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="flipped" width="1920" height="1200"/>
         <image name="skyBackground" width="1920" height="1200"/>
     </resources>
 </document>
