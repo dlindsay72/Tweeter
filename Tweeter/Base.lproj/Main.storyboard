@@ -62,7 +62,7 @@
                                                     </constraints>
                                                     <color key="textColor" red="0.98491555450000001" green="0.69197994470000002" blue="0.30195689199999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="45"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                     <variation key="heightClass=regular-widthClass=compact">
                                                         <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="25"/>
                                                     </variation>
@@ -77,7 +77,7 @@
                                                     </constraints>
                                                     <color key="textColor" red="0.98491555450000001" green="0.69197994470000002" blue="0.30195689199999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="45"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                     <variation key="heightClass=regular-widthClass=compact">
                                                         <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="22"/>
                                                     </variation>
@@ -92,7 +92,7 @@
                                                     </constraints>
                                                     <color key="textColor" red="0.98491555450000001" green="0.69197994470000002" blue="0.30195689199999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="45"/>
-                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                                                     <variation key="heightClass=regular-widthClass=compact">
                                                         <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="22"/>
                                                     </variation>
@@ -110,7 +110,7 @@
                                                             </constraints>
                                                             <color key="textColor" red="0.98491555450000001" green="0.69197994470000002" blue="0.30195689199999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="45"/>
-                                                            <textInputTraits key="textInputTraits"/>
+                                                            <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                             <variation key="heightClass=regular-widthClass=compact">
                                                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="18"/>
                                                             </variation>
@@ -125,7 +125,7 @@
                                                             </constraints>
                                                             <color key="textColor" red="0.98491555450000001" green="0.69197994470000002" blue="0.30195689199999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="45"/>
-                                                            <textInputTraits key="textInputTraits"/>
+                                                            <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                             <variation key="heightClass=regular-widthClass=compact">
                                                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="18"/>
                                                             </variation>

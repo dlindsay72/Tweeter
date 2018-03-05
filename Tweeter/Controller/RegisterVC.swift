@@ -33,6 +33,44 @@ class RegisterVC: UIViewController {
             lastNameTxtField.attributedPlaceholder = NSAttributedString(string: "LAST NAME", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.5808190107, green: 0.0884276256, blue: 0.3186392188, alpha: 1)])
         } else {
             // create new user in MySql
+            // url to php fle
+            let url = URL(string: "http://localhost:8080/TweeterBackend/register.php")!
+            //request to this file
+            var request = URLRequest(url: url)
+            //method to pass data to this file
+            request.httpMethod = "POST"
+            
+            guard let usernameTxt = usernameTxtField.text?.lowercased(), let passwordTxt = passwordTxtField.text, let emailTxt = emailTxtField.text, let firstNameTxt = firstNameTxtField.text, let lastNameTxt = lastNameTxtField.text else {
+                return
+            }
+            //body to be appended to url
+            let body = "username=\(usernameTxt)&password=\(passwordTxt)&email=\(emailTxt)&fullname=\(firstNameTxt)%20\(lastNameTxt)"
+            request.httpBody = body.data(using: .utf8)
+            
+            URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
+                if error == nil {
+                    DispatchQueue.main.async(execute: {
+                        do {
+                            let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
+                            
+                            guard let parseJSON = json else {
+                                print("Error while parsing")
+                                return
+                            }
+                            let id = parseJSON["id"]
+                            
+                            if id != nil {
+                                print(parseJSON)
+                            }
+                        } catch {
+                            print("Caught an error: \(error.localizedDescription)")
+                        }
+                    })
+                    
+                } else {
+                    print("error: \(String(describing: error))")
+                }
+            }).resume()
         }
     }
     
