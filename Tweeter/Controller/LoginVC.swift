@@ -21,7 +21,6 @@ class LoginVC: UIViewController {
         
     }
     
-
     @IBAction func loginBtnTapped(_ sender: UIButton) {
         
     }

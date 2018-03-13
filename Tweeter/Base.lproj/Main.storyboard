@@ -284,15 +284,15 @@
                                                 </textField>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDa-5n-YEd">
                                                     <rect key="frame" x="0.0" y="323" width="708" height="80"/>
-                                                    <color key="backgroundColor" red="0.30594715480000001" green="0.71107721329999996" blue="0.81696611640000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="80" id="cUL-Km-KfA">
                                                             <variation key="heightClass=regular-widthClass=compact" constant="50"/>
                                                         </constraint>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="64"/>
+                                                    <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="100"/>
                                                     <state key="normal" title="Login">
-                                                        <color key="titleColor" red="0.98491555450000001" green="0.69197994470000002" blue="0.30195689199999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="titleColor" red="0.30594715480000001" green="0.71107721329999996" blue="0.81696611640000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <variation key="heightClass=regular-widthClass=compact">
                                                         <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="27"/>
