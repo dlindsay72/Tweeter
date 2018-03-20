@@ -22,7 +22,47 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func loginBtnTapped(_ sender: UIButton) {
-        
+        if usernameTextField.text!.isEmpty || passwordTextField.text!.isEmpty {
+            usernameTextField.attributedPlaceholder = NSAttributedString(string: "USERNAME", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.5807225108, green: 0.066734083, blue: 0, alpha: 1)])
+            passwordTextField.attributedPlaceholder = NSAttributedString(string: "PASSWORD", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.5807225108, green: 0.066734083, blue: 0, alpha: 1)])
+        } else {
+            
+            let username = usernameTextField.text!.lowercased()
+            let password = passwordTextField.text!
+            //send request to MYSQL database
+            let url = URL(string: "http://localhost:8080/TweeterBackend/login.php")!
+            var request = URLRequest(url: url)
+            
+            request.httpMethod = "POST"
+            let body = "username=\(username)&password=\(password)"
+            request.httpBody = body.data(using:.utf8)
+            
+            URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
+                if error == nil {
+                    do {
+                        let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
+                        
+                        guard let parseJSON = json else {
+                            print("error while parsing")
+                            return
+                        }
+                        print(parseJSON)
+                        
+                        let id = parseJSON["id"] as? String
+                        
+                        if id != nil {
+                            // successfully logged in
+                        }
+                        
+                    } catch {
+                        print("Caught an error: \(error.localizedDescription)")
+                    }
+                } else {
+                    print("Error: \(error.debugDescription)")
+                }
+            }).resume()
+            
+        }
     }
     
     @IBAction func notAMemberBtnTapped(_ sender: UIButton) {
