@@ -19,7 +19,11 @@ class ResetPasswordVC: UIViewController {
     }
     
     @IBAction func resetBtnWasPressed(_ sender: Any) {
-        
+        if emailTextField.text!.isEmpty {
+            emailTextField.attributedPlaceholder = NSAttributedString(string: "EMAIL", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.5807225108, green: 0.066734083, blue: 0, alpha: 1)])
+        } else {
+            //send mysql/php/hosting request
+        }
     }
     
     @IBAction func goBackBtnWasPressed(_ sender: Any) {
