@@ -236,7 +236,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="jMH-w0-rPS">
-                                            <rect key="frame" x="30" y="150" width="708" height="504"/>
+                                            <rect key="frame" x="30" y="150" width="708" height="605"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome back!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wUy-X2-fQo">
                                                     <rect key="frame" x="0.0" y="0.0" width="708" height="100"/>
@@ -262,7 +262,7 @@
                                                     </constraints>
                                                     <color key="textColor" red="0.98491555450000001" green="0.69197994470000002" blue="0.30195689199999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="45"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" spellCheckingType="no"/>
                                                     <variation key="heightClass=regular-widthClass=compact">
                                                         <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="22"/>
                                                     </variation>
@@ -320,6 +320,25 @@
                                                         <action selector="notAMemberBtnTapped:" destination="1lj-2c-8R3" eventType="touchUpInside" id="YGf-61-Mae"/>
                                                     </connections>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nOP-sl-QbV">
+                                                    <rect key="frame" x="0.0" y="525" width="708" height="80"/>
+                                                    <color key="backgroundColor" red="0.30594715480000001" green="0.71107721329999996" blue="0.81696611640000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="a5K-G6-qgX">
+                                                            <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                                        </constraint>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="54"/>
+                                                    <state key="normal" title="Forgot Password?">
+                                                        <color key="titleColor" red="0.98491555450000001" green="0.69197994470000002" blue="0.30195689199999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="25"/>
+                                                    </variation>
+                                                    <connections>
+                                                        <action selector="forgotPasswordBtnWasPressed:" destination="1lj-2c-8R3" eventType="touchUpInside" id="z9X-xu-EA9"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </stackView>
                                     </subviews>
@@ -360,6 +379,140 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vyb-N9-3oR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="829.6875" y="-86.1328125"/>
+        </scene>
+        <!--Reset PasswordVC-->
+        <scene sceneID="JfO-RK-ScX">
+            <objects>
+                <viewController storyboardIdentifier="ResetPasswordVC" id="MbL-5D-dwJ" customClass="ResetPasswordVC" customModule="Tweeter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BJ0-sD-GVC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flipped" translatesAutoresizingMaskIntoConstraints="NO" id="P8B-CR-k43">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f0z-5f-PJY">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dgW-OX-0eO">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tweeter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.30000001192092896" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ori-Lq-gRx">
+                                            <rect key="frame" x="8" y="33" width="752" height="169"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="169" id="Tgg-fq-Hso"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="CourierNewPS-BoldItalicMT" family="Courier New" pointSize="170"/>
+                                            <color key="textColor" red="0.98491555450000001" green="0.69197994470000002" blue="0.30195689199999998" alpha="0.1368257705" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="tMc-OO-3IA">
+                                            <rect key="frame" x="30" y="150" width="708" height="403"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reset Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000596046448" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yeI-Wf-lQP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="708" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="dAW-wL-jmZ">
+                                                            <variation key="heightClass=compact-widthClass=compact" constant="60"/>
+                                                        </constraint>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="90"/>
+                                                    <color key="textColor" red="0.30594715480000001" green="0.71107721329999996" blue="0.81696611640000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="45"/>
+                                                    </variation>
+                                                </label>
+                                                <textField opaque="NO" alpha="0.94999998807907104" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mIo-de-LqT">
+                                                    <rect key="frame" x="0.0" y="121" width="708" height="80"/>
+                                                    <color key="backgroundColor" red="0.30594715480000001" green="0.71107721329999996" blue="0.81696611640000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="crb-WB-HcV">
+                                                            <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                                        </constraint>
+                                                    </constraints>
+                                                    <color key="textColor" red="0.98491555450000001" green="0.69197994470000002" blue="0.30195689199999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="45"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="22"/>
+                                                    </variation>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6l-4t-eg0">
+                                                    <rect key="frame" x="0.0" y="222" width="708" height="80"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="GCe-3t-jHy">
+                                                            <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                                        </constraint>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="100"/>
+                                                    <state key="normal" title="Reset">
+                                                        <color key="titleColor" red="0.30594715480000001" green="0.71107721329999996" blue="0.81696611640000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="27"/>
+                                                    </variation>
+                                                    <connections>
+                                                        <action selector="resetBtnWasPressed:" destination="MbL-5D-dwJ" eventType="touchUpInside" id="PkZ-n4-omq"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uww-6G-DDX">
+                                                    <rect key="frame" x="0.0" y="323" width="708" height="80"/>
+                                                    <color key="backgroundColor" red="0.30594715480000001" green="0.71107721329999996" blue="0.81696611640000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="X8f-H5-IE6">
+                                                            <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                                        </constraint>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="54"/>
+                                                    <state key="normal" title="go back">
+                                                        <color key="titleColor" red="0.98491555450000001" green="0.69197994470000002" blue="0.30195689199999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="25"/>
+                                                    </variation>
+                                                    <connections>
+                                                        <action selector="goBackBtnWasPressed:" destination="MbL-5D-dwJ" eventType="touchUpInside" id="tDj-7l-3gN"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="ori-Lq-gRx" secondAttribute="trailing" constant="8" id="3KO-BJ-cOI"/>
+                                        <constraint firstItem="tMc-OO-3IA" firstAttribute="top" secondItem="dgW-OX-0eO" secondAttribute="top" constant="150" id="3WS-IC-PD7">
+                                            <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                                        </constraint>
+                                        <constraint firstItem="ori-Lq-gRx" firstAttribute="leading" secondItem="dgW-OX-0eO" secondAttribute="leading" constant="8" id="dnP-to-Ggc"/>
+                                        <constraint firstItem="ori-Lq-gRx" firstAttribute="top" secondItem="dgW-OX-0eO" secondAttribute="top" constant="33" id="tSx-Cb-cSb"/>
+                                        <constraint firstItem="tMc-OO-3IA" firstAttribute="leading" secondItem="dgW-OX-0eO" secondAttribute="leading" constant="30" id="tjz-P7-sc2"/>
+                                        <constraint firstAttribute="trailing" secondItem="tMc-OO-3IA" secondAttribute="trailing" constant="30" id="tlb-Rh-Xb2"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="f0z-5f-PJY" firstAttribute="leading" secondItem="Bzy-Ii-d5i" secondAttribute="leading" id="EFL-5z-hOf"/>
+                            <constraint firstItem="f0z-5f-PJY" firstAttribute="top" secondItem="BJ0-sD-GVC" secondAttribute="top" id="FcG-Be-KQP"/>
+                            <constraint firstItem="P8B-CR-k43" firstAttribute="leading" secondItem="Bzy-Ii-d5i" secondAttribute="leading" id="Kzy-vh-H9f"/>
+                            <constraint firstItem="P8B-CR-k43" firstAttribute="top" secondItem="BJ0-sD-GVC" secondAttribute="top" id="SNd-V4-C6k"/>
+                            <constraint firstItem="Bzy-Ii-d5i" firstAttribute="trailing" secondItem="f0z-5f-PJY" secondAttribute="trailing" id="TWY-pv-s8A"/>
+                            <constraint firstItem="Bzy-Ii-d5i" firstAttribute="trailing" secondItem="P8B-CR-k43" secondAttribute="trailing" id="eBP-nP-bGe"/>
+                            <constraint firstItem="Bzy-Ii-d5i" firstAttribute="bottom" secondItem="f0z-5f-PJY" secondAttribute="bottom" id="ffa-bf-XsR"/>
+                            <constraint firstItem="Bzy-Ii-d5i" firstAttribute="bottom" secondItem="P8B-CR-k43" secondAttribute="bottom" id="ure-NG-OoA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Bzy-Ii-d5i"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="mIo-de-LqT" id="eRp-w5-MYV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Aa-s0-b6N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1520" y="-114"/>
         </scene>
     </scenes>
     <resources>

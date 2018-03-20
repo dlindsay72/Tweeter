@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7B8F798C20462C960006F78D /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8F798B20462C960006F78D /* LoginVC.swift */; };
+		7BF320E32061739900131770 /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF320E22061739900131770 /* ResetPasswordVC.swift */; };
 		7BFE248B2045F51A00D4288E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFE248A2045F51A00D4288E /* AppDelegate.swift */; };
 		7BFE248D2045F51A00D4288E /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFE248C2045F51A00D4288E /* RegisterVC.swift */; };
 		7BFE24902045F51A00D4288E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BFE248E2045F51A00D4288E /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		7B8F798B20462C960006F78D /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		7BF320E22061739900131770 /* ResetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordVC.swift; sourceTree = "<group>"; };
 		7BFE24872045F51A00D4288E /* Tweeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tweeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BFE248A2045F51A00D4288E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BFE248C2045F51A00D4288E /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				7BFE248A2045F51A00D4288E /* AppDelegate.swift */,
 				7BFE248C2045F51A00D4288E /* RegisterVC.swift */,
 				7B8F798B20462C960006F78D /* LoginVC.swift */,
+				7BF320E22061739900131770 /* ResetPasswordVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 				7BFE248D2045F51A00D4288E /* RegisterVC.swift in Sources */,
 				7BFE248B2045F51A00D4288E /* AppDelegate.swift in Sources */,
 				7B8F798C20462C960006F78D /* LoginVC.swift in Sources */,
+				7BF320E32061739900131770 /* ResetPasswordVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

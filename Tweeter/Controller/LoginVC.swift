@@ -69,4 +69,10 @@ class LoginVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func forgotPasswordBtnWasPressed(_ sender: Any) {
+        let resetPasswordVC = storyboard?.instantiateViewController(withIdentifier: "ResetPasswordVC") as! ResetPasswordVC
+        present(resetPasswordVC, animated: true, completion: nil)
+    }
+    
+    
 }
