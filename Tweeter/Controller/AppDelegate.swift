@@ -12,11 +12,38 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var backgroundImage = UIImageView()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        backgroundImage.frame = CGRect(x: 0, y: 0, width: self.window!.bounds.height * 1.688, height: self.window!.bounds.height)
+        backgroundImage.image = UIImage(named: "skyBackground.jpg")
+        
+        self.window!.addSubview(backgroundImage)
+        moveBackgroundLeft()
         return true
+    }
+    
+    func moveBackgroundLeft() {
+        UIView.animate(withDuration: 45, animations: {
+            self.backgroundImage.frame.origin.x = -self.backgroundImage.bounds.width + self.window!.bounds.width
+        }) { (finished) in
+            if finished {
+                //move right
+                self.moveBackgroundRight()
+            }
+        }
+    }
+    
+    func moveBackgroundRight() {
+        UIView.animate(withDuration: 45, animations: {
+            self.backgroundImage.frame.origin.x = 0
+        }) { (finished) in
+            if finished {
+                //move left
+                self.moveBackgroundLeft()
+            }
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
