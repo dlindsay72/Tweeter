@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7B8F798C20462C960006F78D /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8F798B20462C960006F78D /* LoginVC.swift */; };
+		7BEF733C206BE7D3002B2969 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEF733B206BE7D3002B2969 /* CustomColors.swift */; };
 		7BF320E32061739900131770 /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF320E22061739900131770 /* ResetPasswordVC.swift */; };
 		7BFE248B2045F51A00D4288E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFE248A2045F51A00D4288E /* AppDelegate.swift */; };
 		7BFE248D2045F51A00D4288E /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFE248C2045F51A00D4288E /* RegisterVC.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		7B8F798B20462C960006F78D /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		7BEF733B206BE7D3002B2969 /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		7BF320E22061739900131770 /* ResetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordVC.swift; sourceTree = "<group>"; };
 		7BFE24872045F51A00D4288E /* Tweeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tweeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BFE248A2045F51A00D4288E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 		7BFE249E2045F59B00D4288E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7BEF733B206BE7D3002B2969 /* CustomColors.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BFE248D2045F51A00D4288E /* RegisterVC.swift in Sources */,
+				7BEF733C206BE7D3002B2969 /* CustomColors.swift in Sources */,
 				7BFE248B2045F51A00D4288E /* AppDelegate.swift in Sources */,
 				7B8F798C20462C960006F78D /* LoginVC.swift in Sources */,
 				7BF320E32061739900131770 /* ResetPasswordVC.swift in Sources */,

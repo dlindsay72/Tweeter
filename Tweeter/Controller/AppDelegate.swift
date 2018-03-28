@@ -13,6 +13,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var backgroundImage = UIImageView()
+    
+    // boolean to check is infoView is currently showing or not
+    @objc var infoViewIsShowing = false
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -43,6 +46,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 //move left
                 self.moveBackgroundLeft()
             }
+        }
+    }
+    
+    // info view on top
+    func showInfoView(message: String) {
+        if !infoViewIsShowing {
+            infoViewIsShowing = true
+            
+            let infoViewHeight = self.window!.bounds.height / 14.2
+            let infoViewY = 0 - infoViewHeight
+            let infoView = UIView(frame: CGRect(x: 0, y: infoViewY, width: self.window!.bounds.width, height: infoViewHeight))
+            
+            infoView.backgroundColor = colorSmoothRed
+            self.window!.addSubview(infoView)
+            
         }
     }
 
