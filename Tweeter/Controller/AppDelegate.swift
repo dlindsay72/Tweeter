@@ -61,6 +61,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             infoView.backgroundColor = colorSmoothRed
             self.window!.addSubview(infoView)
             
+            let infoLabelWidth = infoView.bounds.width
+            let infoLabelHeight = infoView.bounds.height + UIApplication.shared.statusBarFrame.height / 2
+            let infoLabel = UILabel()
+        
+            infoLabel.frame.size.width = infoLabelWidth
+            infoLabel.frame.size.height = infoViewHeight
+            infoLabel.numberOfLines = 0
+            infoLabel.text = message
+            infoLabel.font = UIFont(name: "Courier New Regular", size: 12)
+            infoLabel.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            infoLabel.textAlignment = .center
+            
+            infoView.addSubview(infoLabel)
+            
         }
     }
 
