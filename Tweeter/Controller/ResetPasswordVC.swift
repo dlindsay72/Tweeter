@@ -42,13 +42,34 @@ class ResetPasswordVC: UIViewController {
                                 return
                             }
                             
-                            print(parseJSON)
+                            let email = parseJSON["email"]
+                            
+                            //successfully reset
+                            if email != nil {
+                                // done
+                                DispatchQueue.main.async {
+                                    let message = parseJSON["message"] as! String
+                                    appDelegate.showInfoView(message: message, color: customGreen)
+                                }
+                            } else {
+                                print(error.debugDescription)
+                                DispatchQueue.main.async {
+                                    let message = parseJSON["message"] as! String
+                                    appDelegate.showInfoView(message: message, color: customOrange)
+                                }
+                            }
                         } catch {
-                            print("Caught an error while parsing: \(error.localizedDescription)")
+                            DispatchQueue.main.async {
+                                let message =  error as! String// he just force casts the error as String
+                                appDelegate.showInfoView(message: message, color: customOrange)
+                            }
                         }
                     })
                 } else {
-                    print("Error: \(String(describing: error?.localizedDescription))")
+                    DispatchQueue.main.async {
+                        let message = error!.localizedDescription
+                        appDelegate.showInfoView(message: message, color: customOrange)
+                    }
                 }
             }).resume()
             

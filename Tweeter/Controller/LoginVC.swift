@@ -34,6 +34,7 @@ class LoginVC: UIViewController {
             var request = URLRequest(url: url)
             
             request.httpMethod = "POST"
+            
             let body = "username=\(username)&password=\(password)"
             request.httpBody = body.data(using:.utf8)
             
@@ -46,19 +47,37 @@ class LoginVC: UIViewController {
                             print("error while parsing")
                             return
                         }
-                        print(parseJSON)
+                        print("This is parseJSON: \(parseJSON)")
                         
                         let id = parseJSON["id"] as? String
                         
                         if id != nil {
-                            // successfully logged in
+                            DispatchQueue.main.async {
+                                let message = parseJSON["message"] as! String
+                                appDelegate.showInfoView(message: message, color: customGreen)
+                            }
+                        } else {
+                            
+                            DispatchQueue.main.async {
+                                let message = parseJSON["message"] as! String
+                                appDelegate.showInfoView(message: message, color: customOrange)
+                                print("We got here...")
+                            }
                         }
                         
                     } catch {
-                        print("Caught an error: \(error.localizedDescription)")
+                        DispatchQueue.main.async {
+                            let message = error.localizedDescription
+                            appDelegate.showInfoView(message: message, color: customOrange)
+                            print("or we got here")
+                        }
                     }
                 } else {
-                    print("Error: \(error.debugDescription)")
+                    DispatchQueue.main.async {
+                        let message = error!.localizedDescription
+                        appDelegate.showInfoView(message: message, color: customOrange)
+                        print("maybe we ended up here")
+                    }
                 }
             }).resume()
             

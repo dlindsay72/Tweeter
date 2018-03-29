@@ -61,14 +61,29 @@ class RegisterVC: UIViewController {
                             
                             if id != nil {
                                 print(parseJSON)
+                                DispatchQueue.main.async {
+                                    let message = parseJSON["message"] as! String
+                                    appDelegate.showInfoView(message: message, color: customGreen)
+                                }
+                            } else {
+                                DispatchQueue.main.async {
+                                    let message = parseJSON["message"] as! String
+                                    appDelegate.showInfoView(message: message, color: customOrange)
+                                }
                             }
                         } catch {
-                            print("Caught an error: \(error.localizedDescription)")
+                            DispatchQueue.main.async {
+                                let message = error as! String // he just force casts the error as String
+                                appDelegate.showInfoView(message: message, color: customOrange)
+                            }
                         }
                     })
                     
                 } else {
-                    print("error: \(String(describing: error))")
+                    DispatchQueue.main.async {
+                        let message = error!.localizedDescription
+                        appDelegate.showInfoView(message: message, color: customOrange)
+                    }
                 }
             }).resume()
         }
