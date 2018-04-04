@@ -9,7 +9,7 @@
 import UIKit
 
 let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
-
+var user: NSDictionary?
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -27,6 +27,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window!.addSubview(backgroundImage)
         moveBackgroundLeft()
+        
+        user = UserDefaults.standard.value(forKey: "parseJSON") as? NSDictionary
+    
+        if user != nil {
+            if let user = user {
+                let id = user["id"] as? String
+                
+                if id != nil {
+                    login()
+                }
+            }
+        }
         return true
     }
     
@@ -104,6 +116,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
             })
         }
+    }
+    
+    // function to pass to HomeVC or to tab bar
+    func login() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let tabBar = storyboard.instantiateViewController(withIdentifier: "tabBar")
+        window?.rootViewController = tabBar
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

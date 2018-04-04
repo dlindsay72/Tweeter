@@ -14,6 +14,10 @@ class LoginVC: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var notAMemberBtn: UIButton!
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,10 +56,12 @@ class LoginVC: UIViewController {
                         let id = parseJSON["id"] as? String
                         
                         if id != nil {
-                            DispatchQueue.main.async {
-                                let message = parseJSON["message"] as! String
-                                appDelegate.showInfoView(message: message, color: customGreen)
-                            }
+                            // save user info we received from our host
+                            UserDefaults.standard.set(parseJSON, forKey: "parseJSON")
+                            user = UserDefaults.standard.value(forKey: "parseJSON") as? NSDictionary
+                            DispatchQueue.main.async(execute: {
+                                appDelegate.login()
+                            })
                         } else {
                             
                             DispatchQueue.main.async {

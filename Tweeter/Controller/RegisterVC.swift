@@ -19,6 +19,10 @@ class RegisterVC: UIViewController {
     @IBOutlet weak var registerBtn: UIButton!
     @IBOutlet weak var toLoginScreenBtn: UIButton!
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -60,10 +64,10 @@ class RegisterVC: UIViewController {
                             let id = parseJSON["id"]
                             
                             if id != nil {
-                                print(parseJSON)
+                                UserDefaults.standard.set(parseJSON, forKey: "parseJSON")
+                                user = UserDefaults.standard.value(forKey: "parseJSON") as? NSDictionary
                                 DispatchQueue.main.async {
-                                    let message = parseJSON["message"] as! String
-                                    appDelegate.showInfoView(message: message, color: customGreen)
+                                    appDelegate.login()
                                 }
                             } else {
                                 DispatchQueue.main.async {

@@ -12,6 +12,10 @@ class ResetPasswordVC: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

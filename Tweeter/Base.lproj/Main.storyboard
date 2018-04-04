@@ -131,7 +131,7 @@
                                                 </stackView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z43-5h-hJM">
                                                     <rect key="frame" x="0.0" y="499" width="708" height="80"/>
-                                                    <color key="backgroundColor" red="0.30594715476036072" green="0.71107721328735352" blue="0.81696611642837524" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.30588235294117649" green="0.70980392156862748" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="80" id="zU7-lf-WsY">
                                                             <variation key="heightClass=regular-widthClass=compact" constant="50"/>
@@ -139,7 +139,7 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="56"/>
                                                     <state key="normal" title="Register">
-                                                        <color key="titleColor" red="0.95706504579999996" green="0.77469557519999999" blue="0.37972313169999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="titleColor" red="0.95686274509803915" green="0.77647058823529413" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <variation key="heightClass=regular-widthClass=compact">
                                                         <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="25"/>
@@ -493,5 +493,169 @@
             </objects>
             <point key="canvasLocation" x="1520" y="-114"/>
         </scene>
+        <!--HomeVC-->
+        <scene sceneID="wII-iv-lpc">
+            <objects>
+                <viewController id="8FW-lr-KjG" customClass="HomeVC" customModule="Tweeter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RYJ-ao-bnO">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2gu-uI-tf0">
+                                <rect key="frame" x="8" y="92" width="752" height="150"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fadeprofile" translatesAutoresizingMaskIntoConstraints="NO" id="gEN-N3-wdi">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                        <color key="backgroundColor" red="0.30588235289999999" green="0.70980392160000005" blue="0.81568627449999997" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="0BH-gI-O3n"/>
+                                            <constraint firstAttribute="height" constant="150" id="X0J-ci-Q8r"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="YYd-J5-2vR">
+                                        <rect key="frame" x="160" y="0.0" width="592" height="150"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USERNAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eb9-TF-VcV">
+                                                <rect key="frame" x="0.0" y="0.0" width="592" height="25.5"/>
+                                                <color key="backgroundColor" red="0.30588235289999999" green="0.70980392160000005" blue="0.81568627449999997" alpha="0.43902504280821919" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="33"/>
+                                                <color key="textColor" red="0.86714784263959388" green="0.50768823580865186" blue="0.0063157393982935005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lance Janglepantz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="4RK-oy-qnD">
+                                                <rect key="frame" x="0.0" y="41.5" width="592" height="25.5"/>
+                                                <color key="backgroundColor" red="0.30588235289999999" green="0.70980392160000005" blue="0.81568627449999997" alpha="0.43070419520547948" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="29"/>
+                                                <color key="textColor" red="0.95686274510000002" green="0.77647058820000003" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="janglealltheway@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.30000001192092896" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="71X-wc-omh">
+                                                <rect key="frame" x="0.0" y="83" width="592" height="25.5"/>
+                                                <color key="backgroundColor" red="0.65561548223350252" green="0.38384258274895422" blue="0.0047750756303205043" alpha="0.54473458904109584" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="22"/>
+                                                <color key="textColor" red="0.36728616469558628" green="0.86788083370918734" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEL-65-cxb">
+                                                <rect key="frame" x="0.0" y="124.5" width="592" height="25.5"/>
+                                                <color key="backgroundColor" red="0.30588235289999999" green="0.70980392160000005" blue="0.81568627449999997" alpha="0.84334867294520544" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="23"/>
+                                                <state key="normal" title="edit profile pic">
+                                                    <color key="titleColor" red="0.95686274510000002" green="0.77647058820000003" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="editProfileBtnWasPressed:" destination="8FW-lr-KjG" eventType="touchUpInside" id="eSZ-L8-AY2"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="71X-wc-omh" firstAttribute="height" secondItem="Eb9-TF-VcV" secondAttribute="height" id="K9l-uk-CEn"/>
+                                            <constraint firstItem="oEL-65-cxb" firstAttribute="height" secondItem="Eb9-TF-VcV" secondAttribute="height" id="UvM-fN-dAz"/>
+                                            <constraint firstItem="4RK-oy-qnD" firstAttribute="height" secondItem="Eb9-TF-VcV" secondAttribute="height" id="ewX-nG-6Ti"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Cn6-oX-aX7"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="2gu-uI-tf0" firstAttribute="leading" secondItem="bPv-1t-nNQ" secondAttribute="leading" constant="8" id="Aru-Jw-x2x"/>
+                            <constraint firstItem="2gu-uI-tf0" firstAttribute="top" secondItem="bPv-1t-nNQ" secondAttribute="top" constant="28" id="JxE-XL-8uc"/>
+                            <constraint firstAttribute="trailing" secondItem="2gu-uI-tf0" secondAttribute="trailing" constant="8" id="rch-Yu-biR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bPv-1t-nNQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9L2-Om-NC7"/>
+                    <connections>
+                        <outlet property="avatarImage" destination="gEN-N3-wdi" id="vk5-0k-I8k"/>
+                        <outlet property="editProfileBtn" destination="oEL-65-cxb" id="Epn-5t-RJi"/>
+                        <outlet property="emailLbl" destination="71X-wc-omh" id="db5-Xm-eky"/>
+                        <outlet property="fullNameLbl" destination="4RK-oy-qnD" id="Hkn-vp-U5c"/>
+                        <outlet property="usernameLbl" destination="Eb9-TF-VcV" id="vT6-pb-XdD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="coK-rq-3Lx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1969.53125" y="795.703125"/>
+        </scene>
+        <!--Tab BarVC-->
+        <scene sceneID="y1x-Kf-DUr">
+            <objects>
+                <tabBarController storyboardIdentifier="tabBar" id="AeE-mc-sKQ" customClass="TabBarVC" customModule="Tweeter" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1gX-uP-DgC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.30594715480000001" green="0.71107721329999996" blue="0.81696611640000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="trd-X3-QxI" kind="relationship" relationship="viewControllers" id="dSq-rd-yv5"/>
+                        <segue destination="eMD-KU-w4o" kind="relationship" relationship="viewControllers" id="mCo-b6-2U0"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2gz-1Y-FUF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="79" y="796"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="Zp4-JH-xaL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="trd-X3-QxI" customClass="NavVC" customModule="Tweeter" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="Person" id="0mC-ZN-D4H">
+                        <color key="badgeColor" red="0.30594715480000001" green="0.71107721329999996" blue="0.81696611640000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="465-aO-Gcz">
+                        <rect key="frame" x="0.0" y="20" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8FW-lr-KjG" kind="relationship" relationship="rootViewController" id="cwL-rk-pib"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g3a-NV-9ex" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1001" y="796"/>
+        </scene>
+        <!--User Stats-->
+        <scene sceneID="4bo-Ga-T24">
+            <objects>
+                <navigationController id="eMD-KU-w4o" customClass="NavVC" customModule="Tweeter" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="User Stats" image="Person" id="D6k-vu-PlR"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VWb-Ne-9rc">
+                        <rect key="frame" x="0.0" y="20" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="QHJ-Ih-vPy" kind="relationship" relationship="rootViewController" id="Av2-Gv-vwv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7DY-YM-GFe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="173" y="1548"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="I6r-kU-DjZ">
+            <objects>
+                <viewController id="QHJ-Ih-vPy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LmS-Ot-Oxn">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="E65-6M-9Rw"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="KHJ-rH-vZi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zZ5-xh-tpD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="955" y="1539"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="Person" width="25" height="25"/>
+        <image name="fadeprofile" width="350" height="300"/>
+    </resources>
 </document>
