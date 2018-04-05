@@ -16,6 +16,10 @@ class HomeVC: UIViewController {
     @IBOutlet weak var emailLbl: UILabel!
     @IBOutlet weak var editProfileBtn: UIButton!
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -42,7 +42,7 @@ class LoginVC: UIViewController {
             let body = "username=\(username)&password=\(password)"
             request.httpBody = body.data(using:.utf8)
             
-            URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
+            URLSession.shared.dataTask(with: request) { (data, response, error) in
                 if error == nil {
                     do {
                         let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
@@ -85,7 +85,7 @@ class LoginVC: UIViewController {
                         print("maybe we ended up here")
                     }
                 }
-            }).resume()
+            }.resume()
             
         }
     }

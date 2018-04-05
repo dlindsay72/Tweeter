@@ -496,7 +496,7 @@
         <!--HomeVC-->
         <scene sceneID="wII-iv-lpc">
             <objects>
-                <viewController id="8FW-lr-KjG" customClass="HomeVC" customModule="Tweeter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" id="8FW-lr-KjG" customClass="HomeVC" customModule="Tweeter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RYJ-ao-bnO">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -560,6 +560,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2gu-uI-tf0" firstAttribute="leading" secondItem="bPv-1t-nNQ" secondAttribute="leading" constant="8" id="Aru-Jw-x2x"/>
                             <constraint firstItem="2gu-uI-tf0" firstAttribute="top" secondItem="bPv-1t-nNQ" secondAttribute="top" constant="28" id="JxE-XL-8uc"/>
