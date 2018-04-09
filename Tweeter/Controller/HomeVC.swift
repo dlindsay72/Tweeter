@@ -45,8 +45,35 @@ class HomeVC: UIViewController {
     }
     
     @IBAction func editProfileBtnWasPressed(_ sender: Any) {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        picker.allowsEditing = true
         
+        self.present(picker, animated: true, completion: nil)
     }
     
 
 }
+
+extension HomeVC: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        avatarImage.image = info[UIImagePickerControllerEditedImage] as? UIImage
+        self.dismiss(animated: true, completion: nil)
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

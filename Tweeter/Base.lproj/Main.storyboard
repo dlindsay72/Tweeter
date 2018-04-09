@@ -539,7 +539,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEL-65-cxb">
                                                 <rect key="frame" x="0.0" y="124.5" width="592" height="25.5"/>
                                                 <color key="backgroundColor" red="0.30588235289999999" green="0.70980392160000005" blue="0.81568627449999997" alpha="0.84334867294520544" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="23"/>
+                                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="18"/>
                                                 <state key="normal" title="edit profile pic">
                                                     <color key="titleColor" red="0.95686274510000002" green="0.77647058820000003" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
