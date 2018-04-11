@@ -128,7 +128,7 @@ class HomeVC: UIViewController {
                             print("Error while parsing: \(error.debugDescription)")
                             return
                         }
-                        print(parseJSON)
+        
                         let id = parseJSON["id"]
 
                         if id != nil {
@@ -168,6 +168,15 @@ class HomeVC: UIViewController {
         picker.allowsEditing = true
         
         self.present(picker, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func logoutBtnWasPressed(_ sender: Any) {
+        UserDefaults.standard.removeObject(forKey: parseJSONKey)
+        UserDefaults.standard.synchronize()
+        
+        let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+        self.present(loginVC, animated: true, completion: nil)
     }
     
 

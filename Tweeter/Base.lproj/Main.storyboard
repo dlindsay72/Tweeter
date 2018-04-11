@@ -568,7 +568,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bPv-1t-nNQ"/>
                     </view>
-                    <navigationItem key="navigationItem" id="9L2-Om-NC7"/>
+                    <navigationItem key="navigationItem" id="9L2-Om-NC7">
+                        <barButtonItem key="leftBarButtonItem" image="logout" id="Bfv-Uw-lxF">
+                            <color key="tintColor" red="0.98102861640000005" green="0.68806731700000001" blue="0.30252522230000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="logoutBtnWasPressed:" destination="8FW-lr-KjG" id="jJ9-jL-Q2W"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="avatarImage" destination="gEN-N3-wdi" id="vk5-0k-I8k"/>
                         <outlet property="editProfileBtn" destination="oEL-65-cxb" id="Epn-5t-RJi"/>
@@ -579,7 +586,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="coK-rq-3Lx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1969.53125" y="795.703125"/>
+            <point key="canvasLocation" x="1714" y="766"/>
         </scene>
         <!--Tab BarVC-->
         <scene sceneID="y1x-Kf-DUr">
@@ -658,5 +665,6 @@
     <resources>
         <image name="Person" width="25" height="25"/>
         <image name="fadeprofile" width="350" height="300"/>
+        <image name="logout" width="25" height="25"/>
     </resources>
 </document>
