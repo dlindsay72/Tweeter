@@ -45,7 +45,7 @@ class HomeVC: UIViewController {
         fullNameLbl.text = fullname
         
         emailLbl.text = email
-        editProfileBtn.layer.cornerRadius = 5.0
+//        editProfileBtn.layer.cornerRadius = 5.0
         
         // get user profile pic
         
@@ -67,6 +67,9 @@ class HomeVC: UIViewController {
                 }
             })
         }
+        
+        self.navigationItem.title = username
+        
 
     }
     

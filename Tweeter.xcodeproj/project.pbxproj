@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7B1E98D7206D3FCB0053CFF1 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1E98D6206D3FCB0053CFF1 /* HomeVC.swift */; };
+		7B2B2464207EA9FD0053CCCF /* CustomRoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2B2463207EA9FD0053CCCF /* CustomRoundedImage.swift */; };
+		7B2B2466207EAC3F0053CCCF /* CustomRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2B2465207EAC3F0053CCCF /* CustomRoundedButton.swift */; };
+		7B3CCFDA207EBF8E00B74DFE /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3CCFD9207EBF8E00B74DFE /* PostVC.swift */; };
 		7B81105C206DC12F00340EDB /* NavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81105B206DC12F00340EDB /* NavVC.swift */; };
 		7B8F798C20462C960006F78D /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8F798B20462C960006F78D /* LoginVC.swift */; };
 		7BEF733C206BE7D3002B2969 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEF733B206BE7D3002B2969 /* CustomColors.swift */; };
@@ -22,6 +25,9 @@
 
 /* Begin PBXFileReference section */
 		7B1E98D6206D3FCB0053CFF1 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		7B2B2463207EA9FD0053CCCF /* CustomRoundedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRoundedImage.swift; sourceTree = "<group>"; };
+		7B2B2465207EAC3F0053CCCF /* CustomRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRoundedButton.swift; sourceTree = "<group>"; };
+		7B3CCFD9207EBF8E00B74DFE /* PostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
 		7B81105B206DC12F00340EDB /* NavVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavVC.swift; sourceTree = "<group>"; };
 		7B8F798B20462C960006F78D /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		7BEF733B206BE7D3002B2969 /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
@@ -87,6 +93,7 @@
 				7B1E98D6206D3FCB0053CFF1 /* HomeVC.swift */,
 				7B81105B206DC12F00340EDB /* NavVC.swift */,
 				7BF862142073D49B00CD8660 /* TabBarVC.swift */,
+				7B3CCFD9207EBF8E00B74DFE /* PostVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -102,6 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				7BEF733B206BE7D3002B2969 /* CustomColors.swift */,
+				7B2B2463207EA9FD0053CCCF /* CustomRoundedImage.swift */,
+				7B2B2465207EAC3F0053CCCF /* CustomRoundedButton.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -178,14 +187,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B2B2466207EAC3F0053CCCF /* CustomRoundedButton.swift in Sources */,
 				7BFE248D2045F51A00D4288E /* RegisterVC.swift in Sources */,
 				7BEF733C206BE7D3002B2969 /* CustomColors.swift in Sources */,
 				7BFE248B2045F51A00D4288E /* AppDelegate.swift in Sources */,
 				7B1E98D7206D3FCB0053CFF1 /* HomeVC.swift in Sources */,
 				7B8F798C20462C960006F78D /* LoginVC.swift in Sources */,
+				7B2B2464207EA9FD0053CCCF /* CustomRoundedImage.swift in Sources */,
 				7B81105C206DC12F00340EDB /* NavVC.swift in Sources */,
 				7BF862152073D49B00CD8660 /* TabBarVC.swift in Sources */,
 				7BF320E32061739900131770 /* ResetPasswordVC.swift in Sources */,
+				7B3CCFDA207EBF8E00B74DFE /* PostVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
