@@ -663,10 +663,12 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="176" id="Mob-IP-IhX"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" red="0.98102861640000005" green="0.68806731700000001" blue="0.30252522230000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="QHJ-Ih-vPy" id="rYN-wm-S1B"/>
+                                </connections>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="140" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dia-Gt-iRN">
                                 <rect key="frame" x="688" y="289" width="60" height="29"/>
@@ -678,18 +680,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUP-mx-mI1" customClass="CustomRoundedButton" customModule="Tweeter" customModuleProvider="target">
-                                <rect key="frame" x="20" y="288" width="169" height="30"/>
-                                <color key="backgroundColor" red="0.30594715480000001" green="0.71107721329999996" blue="0.81696611640000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="20" y="288" width="160" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="2SV-7x-R5u"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="19"/>
                                 <state key="normal" title="Select picture">
-                                    <color key="titleColor" red="0.98102861640000005" green="0.68806731700000001" blue="0.30252522230000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.30594715480000001" green="0.71107721329999996" blue="0.81696611640000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectPicBtnWasPressed:" destination="QHJ-Ih-vPy" eventType="touchUpInside" id="Jj6-Oo-z1f"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fadeprofile" translatesAutoresizingMaskIntoConstraints="NO" id="1DK-Md-JUA">
-                                <rect key="frame" x="229" y="278" width="50" height="50"/>
+                                <rect key="frame" x="220" y="278" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="6Qg-uS-jH7"/>
                                     <constraint firstAttribute="height" constant="50" id="sgx-bc-sfz"/>
@@ -705,6 +710,9 @@
                                 <state key="normal" title="POST">
                                     <color key="titleColor" red="0.98102861640000005" green="0.68806731700000001" blue="0.30252522230000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="postBtnWasPressed:" destination="QHJ-Ih-vPy" eventType="touchUpInside" id="sQ1-0M-jhe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -726,6 +734,13 @@
                         <viewLayoutGuide key="safeArea" id="E65-6M-9Rw"/>
                     </view>
                     <navigationItem key="navigationItem" title="POST" id="KHJ-rH-vZi"/>
+                    <connections>
+                        <outlet property="charactersLbl" destination="dia-Gt-iRN" id="ecS-lE-yT8"/>
+                        <outlet property="postBtn" destination="jvQ-6t-7gh" id="khj-9L-9y2"/>
+                        <outlet property="postImageView" destination="1DK-Md-JUA" id="fUJ-vT-G2z"/>
+                        <outlet property="postTextView" destination="JTg-T1-HLI" id="GOX-qh-fxL"/>
+                        <outlet property="selectPicBtn" destination="sUP-mx-mI1" id="s7v-qD-cns"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zZ5-xh-tpD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

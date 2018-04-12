@@ -25,6 +25,10 @@ class LoginVC: UIViewController {
         
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(false)
+    }
+    
     @IBAction func loginBtnTapped(_ sender: UIButton) {
         if usernameTextField.text!.isEmpty || passwordTextField.text!.isEmpty {
             usernameTextField.attributedPlaceholder = NSAttributedString(string: "USERNAME", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.5807225108, green: 0.066734083, blue: 0, alpha: 1)])

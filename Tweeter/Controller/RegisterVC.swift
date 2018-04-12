@@ -27,6 +27,10 @@ class RegisterVC: UIViewController {
         super.viewDidLoad()
         
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(false)
+    }
 
     @IBAction func registerBtnTapped(_ sender: Any) {
         if usernameTxtField.text!.isEmpty || passwordTxtField.text!.isEmpty || emailTxtField.text!.isEmpty || firstNameTxtField.text!.isEmpty || lastNameTxtField.text!.isEmpty {
