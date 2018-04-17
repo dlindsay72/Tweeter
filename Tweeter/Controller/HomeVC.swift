@@ -78,7 +78,7 @@ class HomeVC: UIViewController {
     //MARK: - Custom Class Methods
     @objc func createBodyWith(parameters: [String: String]?, filePathKey: String?, imageDataKey: Data, boundary: String) -> Data {
         let body = NSMutableData()
-        
+
         if parameters != nil {
             for (key, value) in parameters! {
                 body.appendString("--\(boundary)\r\n")
@@ -86,17 +86,17 @@ class HomeVC: UIViewController {
                 body.appendString("\(value)\r\n")
             }
         }
-        
+
         let filename = "ava.jpg"
         let mimeType = "image/jpg"
-        
+
         body.appendString("--\(boundary)\r\n")
         body.appendString("Content-Disposition: form-data; name=\"\(filePathKey!)\"; filename=\"\(filename)\"\r\n")
         body.appendString("Content-Type: \(mimeType)\r\n\r\n")
         body.append(imageDataKey)
         body.appendString("\r\n")
         body.appendString("--\(boundary)--\r\n")
-        
+
         return body as Data
     }
     
