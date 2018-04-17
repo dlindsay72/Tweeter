@@ -108,6 +108,7 @@ class PostVC: UIViewController {
                         let message = parseJSON["message"]
                         
                         if message != nil {
+                            print("Successfully posted!")
                             self.charactersLbl.text = "140"
                             self.postTextView.text = ""
                             self.postImageView.image = nil
@@ -119,17 +120,15 @@ class PostVC: UIViewController {
                         }
                     } catch {
                         DispatchQueue.main.async(execute: {
-                            let message = "\(error.localizedDescription)"
+                            let message = String(error.localizedDescription)
                             appDelegate.showInfoView(message: message, color: customOrange)
                         })
-                        return
                     }
                 } else {
                     DispatchQueue.main.async(execute: {
-                        let message = "\(error.debugDescription)"
+                        let message = String(error.debugDescription)
                         appDelegate.showInfoView(message: message, color: customOrange)
                     })
-                    return
                 }
             })
         }.resume()
