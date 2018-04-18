@@ -246,6 +246,50 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         let tweet = tweets[indexPath.row]
         let username = tweet["username"] as? String
         let text = tweet["text"] as? String
+        let date = tweet["date"] as! String
+        
+        let dateFormater = DateFormatter()
+        dateFormater.dateFormat = "yyyy-MM-dd-HH:mm:ss"
+        let newDate = dateFormater.date(from: date)!
+        
+        let from = newDate
+        let now = Date()
+        let components : NSCalendar.Unit = [.second, .minute, .hour, .day, .weekOfMonth, .year]
+        let difference = (Calendar.current as NSCalendar).components(components, from: from, to: now, options: [])
+        print(difference)
+        // calculate date
+        if difference.second! <= 0 {
+            cell.timeStampLbl.text = "now"
+        }
+        if difference.second! > 0 && difference.minute! == 0 {
+            cell.timeStampLbl.text = "\(difference.second!)s." // 12s.
+        }
+        if difference.minute! > 0 && difference.hour! == 0 {
+            if let minuteDif = difference.minute {
+                cell.timeStampLbl.text = "\(minuteDif)m."
+            }
+        }
+        if difference.hour! > 0 && difference.day! == 0 {
+            if let hourDif = difference.hour {
+                cell.timeStampLbl.text = "\(hourDif)h."
+            }
+        }
+        if difference.day! > 0 && difference.weekOfMonth! == 0 {
+            if let dayDif = difference.day {
+                cell.timeStampLbl.text = "\(dayDif)d."
+            }
+        }
+        if difference.weekOfMonth! > 0 {
+            if let monthDif = difference.month {
+                cell.timeStampLbl.text = "\(monthDif)w."
+            }
+        }
+        
+        if difference.year! > 0 {
+            if let yearDif = difference.year {
+                cell.timeStampLbl.text = "\(yearDif)y."
+            }
+        }
         
         cell.usernameLbl.text = username
         cell.postLbl.text = text
