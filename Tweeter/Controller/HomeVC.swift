@@ -9,7 +9,6 @@
 import UIKit
 
 public var parseJSONKey = "parseJSON"
-public let localHostKey = "http://localhost:8080/TweeterBackend/uploadAva.php"
 
 class HomeVC: UIViewController {
     
@@ -20,10 +19,12 @@ class HomeVC: UIViewController {
     @IBOutlet weak var fullNameLbl: UILabel!
     @IBOutlet weak var emailLbl: UILabel!
     @IBOutlet weak var editProfileBtn: UIButton!
+    @IBOutlet weak var tableView: UITableView!
     
     //MARK: - Class Properties
     
     let picker = UIImagePickerController()
+    @objc var tweets = [AnyObject]()
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
@@ -34,6 +35,9 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         picker.delegate = self
+        
+        tableView.delegate = self
+        tableView.dataSource = self
         
         let username = (user!["username"] as AnyObject).uppercased
         let fullname = user!["fullname"] as? String
@@ -70,7 +74,12 @@ class HomeVC: UIViewController {
         
         self.navigationItem.title = username
         
-
+        tableView.contentInset = UIEdgeInsetsMake(2, 0, 0, 0)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loadPosts()
     }
     
     
@@ -103,7 +112,7 @@ class HomeVC: UIViewController {
     @objc func uploadAva() {
 
         let id = user!["id"] as! String
-        let url = URL(string: localHostKey)!
+        let url = URL(string: HostKey.uploadAva.rawValue)!
         var request = URLRequest(url: url)
 
         request.httpMethod = "POST"
@@ -159,14 +168,47 @@ class HomeVC: UIViewController {
         }.resume()
     }
     
-    
+    func loadPosts() {
+        let id = user!["id"] as! String
+        let url = URL(string: HostKey.posts.rawValue)!
+        var request = URLRequest(url: url)
+        
+        request.httpMethod = "POST"
+        let body = "id=\(id)&text=&uuid="
+        request.httpBody = body.data(using: .utf8)
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            DispatchQueue.main.async(execute: {
+                if error == nil {
+                    do {
+                        let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
+                        guard let parseJSON = json else {
+                            print("Error while parsing in loadPosts")
+                            return
+                        }
+                        
+                        guard let posts = parseJSON["posts"] as? [AnyObject] else {
+                            print("Error parsing posts form parseJSON")
+                            return
+                        }
+                        print(posts)
+                        self.tweets = posts
+                        self.tableView.reloadData()
+                        
+                    } catch {
+                        
+                    }
+                } else {
+                    print(error.debugDescription)
+                }
+            })
+        }.resume()
+    }
     
     
     // MARK: - IBActions
     
     @IBAction func editProfileBtnWasPressed(_ sender: Any) {
-        
-        
         picker.sourceType = UIImagePickerControllerSourceType.photoLibrary
         picker.allowsEditing = true
         
@@ -193,6 +235,38 @@ extension HomeVC: UINavigationControllerDelegate, UIImagePickerControllerDelegat
         self.dismiss(animated: true, completion: nil)
         uploadAva()
     }
+}
+
+//MARK: - UITableViewDelegate, UITableViewDataSource
+
+extension HomeVC: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: postCellIdentifier, for: indexPath) as! PostCell
+        
+        let tweet = tweets[indexPath.row]
+        let username = tweet["username"] as? String
+        let text = tweet["text"] as? String
+        
+        cell.usernameLbl.text = username
+        cell.postLbl.text = text
+        
+        DispatchQueue.main.async {
+            cell.postLbl.sizeToFit()
+        }
+        
+        cell.postImage.image = UIImage(named: "fadeprofile.png")
+        return cell
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tweets.count
+    }
+    
+    
 }
 
 // MARK: - NSMutableData

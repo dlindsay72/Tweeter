@@ -38,7 +38,7 @@ class LoginVC: UIViewController {
             let username = usernameTextField.text!.lowercased()
             let password = passwordTextField.text!
             //send request to MYSQL database
-            let url = URL(string: "http://localhost:8080/TweeterBackend/login.php")!
+            let url = URL(string: HostKey.login.rawValue)!
             var request = URLRequest(url: url)
             
             request.httpMethod = "POST"

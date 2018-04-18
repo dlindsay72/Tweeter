@@ -191,6 +191,8 @@ extension PostVC: UIImagePickerControllerDelegate, UINavigationControllerDelegat
     }
 }
 
+//MARK: - String extension
+
 extension String {
     func trunc(_ length: Int, trailing: String? = "...") -> String {
         if self.count > length {

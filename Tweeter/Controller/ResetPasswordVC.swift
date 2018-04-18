@@ -32,7 +32,7 @@ class ResetPasswordVC: UIViewController {
         } else {
             let email = emailTextField.text!.lowercased()
             //send mysql/php/hosting request
-            let url = URL(string: "http://localhost:8080/TweeterBackend/resetPassword.php")!
+            let url = URL(string: HostKey.resetPassword.rawValue)!
             //request to send to this file
             var request = URLRequest(url: url)
             request.httpMethod = "POST"

@@ -42,7 +42,7 @@ class RegisterVC: UIViewController {
         } else {
             // create new user in MySql
             // url to php fle
-            let url = URL(string: "http://localhost:8080/TweeterBackend/register.php")!
+            let url = URL(string: HostKey.register.rawValue)!
             //request to this file
             var request = URLRequest(url: url)
             //method to pass data to this file
