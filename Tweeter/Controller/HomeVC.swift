@@ -24,7 +24,8 @@ class HomeVC: UIViewController {
     //MARK: - Class Properties
     
     let picker = UIImagePickerController()
-    @objc var tweets = [AnyObject]()
+    var tweets = [AnyObject]()
+    var images = [UIImage]()
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
@@ -182,6 +183,9 @@ class HomeVC: UIViewController {
                 if error == nil {
                     do {
                         let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
+                        self.tweets.removeAll(keepingCapacity: false)
+                        self.images.removeAll(keepingCapacity: false)
+                        self.tableView.reloadData()
                         guard let parseJSON = json else {
                             print("Error while parsing in loadPosts")
                             return
@@ -193,6 +197,24 @@ class HomeVC: UIViewController {
                         }
                         print(posts)
                         self.tweets = posts
+                        
+                        //get images from url paths
+                        for i in 0..<self.tweets.count {
+                            if let path = self.tweets[i]["path"] as? String {
+                                if !path.isEmpty {
+                                    let url = URL(string: path)!
+                                    if let imageData = try? Data(contentsOf: url) {
+                                        if let image = UIImage(data: imageData) {
+                                            self.images.append(image)
+                                        }
+                                    }
+                                } else {
+                                    let image = UIImage()
+                                    self.images.append(image)
+                                }
+                            }
+                        }
+                        
                         self.tableView.reloadData()
                         
                     } catch {
@@ -231,7 +253,7 @@ class HomeVC: UIViewController {
 
 extension HomeVC: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        avatarImage.image = info[UIImagePickerControllerEditedImage] as? UIImage
+        avatarImage.image = info[UIImagePickerControllerEditedImage] as? UIImage 
         self.dismiss(animated: true, completion: nil)
         uploadAva()
     }
@@ -293,12 +315,15 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         
         cell.usernameLbl.text = username
         cell.postLbl.text = text
+        cell.postImage.image = images[indexPath.row]
         
         DispatchQueue.main.async {
             cell.postLbl.sizeToFit()
+            
+            
         }
         
-        cell.postImage.image = UIImage(named: "fadeprofile.png")
+        
         return cell
     }
     
