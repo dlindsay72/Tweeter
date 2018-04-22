@@ -195,7 +195,7 @@ class HomeVC: UIViewController {
                             print("Error parsing posts form parseJSON")
                             return
                         }
-                        print(posts)
+    
                         self.tweets = posts
                         
                         //get images from url paths
@@ -266,6 +266,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: postCellIdentifier, for: indexPath) as! PostCell
         
         let tweet = tweets[indexPath.row]
+        let image = images[indexPath.row]
         let username = tweet["username"] as? String
         let text = tweet["text"] as? String
         let date = tweet["date"] as! String
@@ -318,12 +319,16 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         cell.postImage.image = images[indexPath.row]
         
         DispatchQueue.main.async {
-            cell.postLbl.sizeToFit()
             
-            
+            if image.size.width == 0 && image.size.height == 0 {
+                // uncomment the two lines below to shift the post label over to the left if there is no image posted
+     //           cell.postLbl.frame.origin.x = self.view.frame.size.width / 16
+     //           cell.postLbl.frame.size.width = self.view.frame.size.width / 8
+                cell.postLbl.sizeToFit()
+                
+            }
         }
-        
-        
+
         return cell
     }
     
@@ -334,6 +339,8 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tweets.count
     }
+    
+    
     
     
 }
