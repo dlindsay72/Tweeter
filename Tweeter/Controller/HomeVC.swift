@@ -218,13 +218,22 @@ class HomeVC: UIViewController {
                         self.tableView.reloadData()
                         
                     } catch {
-                        
+                        DispatchQueue.main.async(execute: {
+                            let message = error.localizedDescription
+                            appDelegate.showInfoView(message: message, color: customOrange)
+                        })
                     }
                 } else {
-                    print(error.debugDescription)
+                    DispatchQueue.main.async(execute: {
+                        let message = error!.localizedDescription
+                        appDelegate.showInfoView(message: message, color: customOrange)
+                    })
                 }
             })
         }.resume()
+        
+        //DELETE
+        
     }
     
     
@@ -340,8 +349,72 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         return tweets.count
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
     
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let deleteAction: UITableViewRowAction = UITableViewRowAction(style: .destructive, title: "DESTROY") { (rowAction, indexPath) in
+            self.deletePost(indexPath)
+        }
+        deleteAction.backgroundColor = customOrange
+
+        return [deleteAction]
+    }
     
+    @objc func deletePost(_ indexPath: IndexPath) {
+        let tweet = tweets[indexPath.row]
+        let uuid = tweet["uuid"] as! String
+        let path = tweet["path"] as! String
+        let url = URL(string: HostKey.posts.rawValue)!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        let body = "uuid=\(uuid)&path=\(path)" // body - here we are passing info
+
+        request.httpBody = body.data(using: String.Encoding.utf8)
+
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            DispatchQueue.main.async {
+                if error == nil {
+                    do {
+                        let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
+                        guard let parseJSON = json else {
+                            print("Error while parsing")
+                            return
+                        }
+
+                        print(parseJSON)
+                        let result = parseJSON["result"]
+                        
+                        if result != nil {
+                            self.tweets.remove(at: indexPath.row)
+                            self.images.remove(at: indexPath.row)
+                            self.tableView.deleteRows(at: [indexPath], with: .fade)
+                            self.tableView.reloadData()
+                        } else {
+                            DispatchQueue.main.async(execute: {
+                                let message = parseJSON["message"] as! String
+                                appDelegate.showInfoView(message: message, color: customOrange)
+                            })
+                            return
+                        }
+                    } catch {
+                        DispatchQueue.main.async(execute: {
+                            let message = error.localizedDescription
+                            appDelegate.showInfoView(message: message, color: customOrange)
+                        })
+                        return
+                    }
+                } else {
+                    DispatchQueue.main.async(execute: {
+                        let message = error!.localizedDescription
+                        appDelegate.showInfoView(message: message, color: customOrange)
+                    })
+                    return
+                }
+            }
+        }.resume()
+    }
     
 }
 
