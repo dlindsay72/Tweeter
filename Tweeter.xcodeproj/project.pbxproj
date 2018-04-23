@@ -15,6 +15,8 @@
 		7B6CA2FA20864E0E00722A4D /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6CA2F920864E0E00722A4D /* PostCell.swift */; };
 		7B81105C206DC12F00340EDB /* NavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81105B206DC12F00340EDB /* NavVC.swift */; };
 		7B8F798C20462C960006F78D /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8F798B20462C960006F78D /* LoginVC.swift */; };
+		7BDDBF98208E492200A07EE5 /* SearchUsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDDBF97208E492200A07EE5 /* SearchUsersVC.swift */; };
+		7BDDBF9A208E4A3D00A07EE5 /* UsersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDDBF99208E4A3D00A07EE5 /* UsersCell.swift */; };
 		7BEF733C206BE7D3002B2969 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEF733B206BE7D3002B2969 /* CustomColors.swift */; };
 		7BF320E32061739900131770 /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF320E22061739900131770 /* ResetPasswordVC.swift */; };
 		7BF862152073D49B00CD8660 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF862142073D49B00CD8660 /* TabBarVC.swift */; };
@@ -34,6 +36,8 @@
 		7B6CA2F920864E0E00722A4D /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		7B81105B206DC12F00340EDB /* NavVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavVC.swift; sourceTree = "<group>"; };
 		7B8F798B20462C960006F78D /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		7BDDBF97208E492200A07EE5 /* SearchUsersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUsersVC.swift; sourceTree = "<group>"; };
+		7BDDBF99208E4A3D00A07EE5 /* UsersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersCell.swift; sourceTree = "<group>"; };
 		7BEF733B206BE7D3002B2969 /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		7BF320E22061739900131770 /* ResetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordVC.swift; sourceTree = "<group>"; };
 		7BF862142073D49B00CD8660 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
@@ -98,6 +102,7 @@
 				7B81105B206DC12F00340EDB /* NavVC.swift */,
 				7BF862142073D49B00CD8660 /* TabBarVC.swift */,
 				7B3CCFD9207EBF8E00B74DFE /* PostVC.swift */,
+				7BDDBF97208E492200A07EE5 /* SearchUsersVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -106,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				7B6CA2F920864E0E00722A4D /* PostCell.swift */,
+				7BDDBF99208E4A3D00A07EE5 /* UsersCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -201,9 +207,11 @@
 				7B1E98D7206D3FCB0053CFF1 /* HomeVC.swift in Sources */,
 				7B8F798C20462C960006F78D /* LoginVC.swift in Sources */,
 				7B2B2464207EA9FD0053CCCF /* CustomRoundedImage.swift in Sources */,
+				7BDDBF9A208E4A3D00A07EE5 /* UsersCell.swift in Sources */,
 				7B81105C206DC12F00340EDB /* NavVC.swift in Sources */,
 				7BF862152073D49B00CD8660 /* TabBarVC.swift in Sources */,
 				7BF320E32061739900131770 /* ResetPasswordVC.swift in Sources */,
+				7BDDBF98208E492200A07EE5 /* SearchUsersVC.swift in Sources */,
 				7B3CCFDA207EBF8E00B74DFE /* PostVC.swift in Sources */,
 				7B6CA2FA20864E0E00722A4D /* PostCell.swift in Sources */,
 			);
