@@ -35,6 +35,7 @@ class LoginVC: UIViewController {
             passwordTextField.attributedPlaceholder = NSAttributedString(string: "PASSWORD", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.5807225108, green: 0.066734083, blue: 0, alpha: 1)])
         } else {
             
+            self.view.resignFirstResponder()
             let username = usernameTextField.text!.lowercased()
             let password = passwordTextField.text!
             //send request to MYSQL database

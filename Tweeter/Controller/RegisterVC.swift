@@ -40,6 +40,7 @@ class RegisterVC: UIViewController {
             firstNameTxtField.attributedPlaceholder = NSAttributedString(string: "FIRST NAME", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.5808190107, green: 0.0884276256, blue: 0.3186392188, alpha: 1)])
             lastNameTxtField.attributedPlaceholder = NSAttributedString(string: "LAST NAME", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.5808190107, green: 0.0884276256, blue: 0.3186392188, alpha: 1)])
         } else {
+            self.view.endEditing(true)
             // create new user in MySql
             // url to php fle
             let url = URL(string: HostKey.register.rawValue)!

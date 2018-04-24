@@ -30,6 +30,7 @@ class ResetPasswordVC: UIViewController {
         if emailTextField.text!.isEmpty {
             emailTextField.attributedPlaceholder = NSAttributedString(string: "EMAIL", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.5807225108, green: 0.066734083, blue: 0, alpha: 1)])
         } else {
+            self.view.endEditing(true)
             let email = emailTextField.text!.lowercased()
             //send mysql/php/hosting request
             let url = URL(string: HostKey.resetPassword.rawValue)!

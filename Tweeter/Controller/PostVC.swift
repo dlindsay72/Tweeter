@@ -104,7 +104,7 @@ class PostVC: UIViewController {
                             print("Error while parsing in PostVC")
                             return
                         }
-                        print(parseJSON)
+                     //   print(parseJSON)
                         let message = parseJSON["message"]
                         
                         if message != nil {

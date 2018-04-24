@@ -53,16 +53,16 @@ class SearchUsersVC: UITableViewController {
                         self.tableView.reloadData()
                         
                         guard let parseJSON = json else {
-                            print("Error while parsing in guard statement")
+                       //     print("Error while parsing in guard statement")
                             return
                         }
                         
                         guard let parseUSERS = parseJSON["users"] else {
-                            print(parseJSON["message"] ?? [NSDictionary]())
+                       //     print(parseJSON["message"] ?? [NSDictionary]())
                             return
                         }
                         
-                        print(parseUSERS)
+                   //     print(parseUSERS)
                         
                         self.users = parseUSERS as! [AnyObject]
                         
@@ -109,11 +109,32 @@ class SearchUsersVC: UITableViewController {
         let username = user["username"] as? String
         let fullname = user["fullname"] as? String
         
-        cell.usernameLbl.text = username
-        cell.fullNameLbl.text = fullname
+        cell.usernameLbl.text = username?.uppercased()
+        cell.fullNameLbl.text = fullname?.capitalized
         cell.userImage.image = ava
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let cell = sender as? UITableViewCell {
+            let index = tableView.indexPath(for: cell)!.row
+            
+            if segue.identifier == guestSegueIdentifier {
+                let guestVC = segue.destination as! GuestVC
+                guestVC.guest = users[index] as! NSDictionary
+                
+                let backBtnItem = UIBarButtonItem()
+                backBtnItem.title = ""
+                navigationItem.backBarButtonItem = backBtnItem
+                backBtnItem.tintColor = customSoftOrange
+                
+            }
+        }
     }
 
 }
