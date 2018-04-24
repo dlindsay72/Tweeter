@@ -14,4 +14,5 @@ enum HostKey: String {
     case login = "http://localhost:8080/TweeterBackend/login.php"
     case register = "http://localhost:8080/TweeterBackend/register.php"
     case resetPassword = "http://localhost:8080/TweeterBackend/resetPassword.php"
+    case searchUsers = "http://localhost:8080/TweeterBackend/users.php"
 }
