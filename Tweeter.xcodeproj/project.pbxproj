@@ -13,6 +13,7 @@
 		7B2B2466207EAC3F0053CCCF /* CustomRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2B2465207EAC3F0053CCCF /* CustomRoundedButton.swift */; };
 		7B3CCFDA207EBF8E00B74DFE /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3CCFD9207EBF8E00B74DFE /* PostVC.swift */; };
 		7B6CA2FA20864E0E00722A4D /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6CA2F920864E0E00722A4D /* PostCell.swift */; };
+		7B72C7B620900A95008081A9 /* UpdateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B72C7B520900A95008081A9 /* UpdateVC.swift */; };
 		7B81105C206DC12F00340EDB /* NavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81105B206DC12F00340EDB /* NavVC.swift */; };
 		7B8F798C20462C960006F78D /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8F798B20462C960006F78D /* LoginVC.swift */; };
 		7BD97596208F8C0C00DF58F1 /* GuestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD97595208F8C0C00DF58F1 /* GuestVC.swift */; };
@@ -35,6 +36,7 @@
 		7B2B2465207EAC3F0053CCCF /* CustomRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRoundedButton.swift; sourceTree = "<group>"; };
 		7B3CCFD9207EBF8E00B74DFE /* PostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
 		7B6CA2F920864E0E00722A4D /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		7B72C7B520900A95008081A9 /* UpdateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateVC.swift; sourceTree = "<group>"; };
 		7B81105B206DC12F00340EDB /* NavVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavVC.swift; sourceTree = "<group>"; };
 		7B8F798B20462C960006F78D /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		7BD97595208F8C0C00DF58F1 /* GuestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestVC.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				7B3CCFD9207EBF8E00B74DFE /* PostVC.swift */,
 				7BDDBF97208E492200A07EE5 /* SearchUsersVC.swift */,
 				7BD97595208F8C0C00DF58F1 /* GuestVC.swift */,
+				7B72C7B520900A95008081A9 /* UpdateVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				7B01F3662086D97100F9DF6E /* HostKey.swift in Sources */,
 				7B1E98D7206D3FCB0053CFF1 /* HomeVC.swift in Sources */,
 				7BD97596208F8C0C00DF58F1 /* GuestVC.swift in Sources */,
+				7B72C7B620900A95008081A9 /* UpdateVC.swift in Sources */,
 				7B8F798C20462C960006F78D /* LoginVC.swift in Sources */,
 				7B2B2464207EA9FD0053CCCF /* CustomRoundedImage.swift in Sources */,
 				7BDDBF9A208E4A3D00A07EE5 /* UsersCell.swift in Sources */,

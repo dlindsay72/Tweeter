@@ -246,7 +246,13 @@ class HomeVC: UIViewController {
             self.selectProfilePicture()
         }
         let editBtn = UIAlertAction(title: "Update profile", style: .default) { (action) in
-            print("Update profile pressed")
+            let updateVC = self.storyboard?.instantiateViewController(withIdentifier: "UpdateVC") as! UpdateVC
+            self.navigationController?.pushViewController(updateVC, animated: true)
+            
+            //remove title from back button
+            let backItem = UIBarButtonItem()
+            backItem.title = ""
+            self.navigationItem.backBarButtonItem = backItem
         }
         
         sheet.addAction(cancelBtn)
