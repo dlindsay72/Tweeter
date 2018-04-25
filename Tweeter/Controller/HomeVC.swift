@@ -23,7 +23,7 @@ class HomeVC: UIViewController {
     
     //MARK: - Class Properties
     
-    let picker = UIImagePickerController()
+    
     var tweets = [AnyObject]()
     var images = [UIImage]()
     
@@ -35,7 +35,7 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        picker.delegate = self
+        
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -240,9 +240,27 @@ class HomeVC: UIViewController {
     // MARK: - IBActions
     
     @IBAction func editProfileBtnWasPressed(_ sender: Any) {
+        let sheet = UIAlertController(title: "Edit profile", message: nil, preferredStyle: .actionSheet)
+        let cancelBtn = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let pictureBtn = UIAlertAction(title: "Change picture", style: .default) { (action) in
+            self.selectProfilePicture()
+        }
+        let editBtn = UIAlertAction(title: "Update profile", style: .default) { (action) in
+            print("Update profile pressed")
+        }
+        
+        sheet.addAction(cancelBtn)
+        sheet.addAction(pictureBtn)
+        sheet.addAction(editBtn)
+        
+        self.present(sheet, animated: true, completion: nil)
+    }
+    
+    func selectProfilePicture() {
+        let picker = UIImagePickerController()
+        picker.delegate = self
         picker.sourceType = UIImagePickerControllerSourceType.photoLibrary
         picker.allowsEditing = true
-        
         self.present(picker, animated: true, completion: nil)
     }
     
