@@ -15,6 +15,6 @@ class CustomRoundedImage: UIImageView {
     }
     
     func setupView() {
-        self.layer.cornerRadius = self.bounds.width / 20
+        self.layer.cornerRadius = self.bounds.width / 2
     }
 }

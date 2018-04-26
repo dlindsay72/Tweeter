@@ -16,6 +16,6 @@ class CustomRoundedButton: UIButton {
     }
     
     func setupView() {
-        self.layer.cornerRadius = 5.0
+        self.layer.cornerRadius = 7.0
     }
 }
